@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +11,13 @@
     <link rel="stylesheet" href="css/default.css" />
     <script src="js/jquery-3.6.4.min.js"></script>
     <script src="js/api.js"></script>
-    <script>
-        function login(event) {
-            event.preventDefault();
-            var loginData = {
-                email: document.getElementById('email').value,
-                senha: document.getElementById('senha').value
-            };
-            var isValid = validarUsuario(loginData);
-            if (isValid) {
-                window.location.href = 'mensagens.html';
-            } else {
-                alert('E-mail e Senha inválidos');
-            }
-        }
-    </script>
+    <script src="js/admin.js"></script>
+
 </head>
+
+
 <body>
+
     <h2>Admin Login</h2>
     <form onsubmit="login(event)">
         <label for="email">E-mail:</label>
@@ -36,5 +28,6 @@
         <br>
         <button type="submit">Login</button>
     </form>
+
 </body>
 </html>
